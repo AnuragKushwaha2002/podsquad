@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./auth-service/.env
+    depends_on:
+      - mysql
+    volumes:
+      - ./auth-service:/app
+    working_dir: /app
+    command: npm run dev
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Anurag@123
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql

@@ -1,0 +1,12 @@
+{
+  "name": "podsquad",
+  "version": "1.0.0",
+  "description": "Codebase for Podsquad, a platform enabling effortless podcast hosting and listening.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
