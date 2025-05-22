@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# MySQL runtime files
+mysql/data/
+*.pem
+*.pid
+*.sock
+ibdata1
+*.err
+*.log
+*.cnf
+binlog.*

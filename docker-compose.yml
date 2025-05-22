@@ -9,8 +9,6 @@ services:
       - ./auth-service/.env
     depends_on:
       - mysql
-    volumes:
-      - ./auth-service:/app
     working_dir: /app
     command: npm run dev
 
@@ -24,3 +22,14 @@ services:
     volumes:
       - ./mysql/data:/var/lib/mysql
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./frontend/.env.local
+    depends_on:
+      - auth-service
+    working_dir: /app
+    command: npm run dev  

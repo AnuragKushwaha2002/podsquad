@@ -1,5 +1,7 @@
+// src/config/db.js
 import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
 export const pool = mysql.createPool({
@@ -9,7 +11,7 @@ export const pool = mysql.createPool({
   database: process.env.DB_NAME,
 });
 
-// ✅ Add this
+// Optional helper if you want to get a dedicated connection
 export async function getConnection() {
   return await pool.getConnection();
 }

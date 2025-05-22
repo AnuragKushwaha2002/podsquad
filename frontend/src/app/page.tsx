@@ -1,7 +1,7 @@
 // frontend/app/page.tsx
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <main className="min-h-screen flex flex-col items-center justify-center">
       <h1 className="text-5xl font-bold mb-4">🎙️ PodSquad</h1>
       <p className="text-xl text-gray-600 mb-8">Collaborate, Create, Publish Podcasts</p>
       <div className="flex gap-4">

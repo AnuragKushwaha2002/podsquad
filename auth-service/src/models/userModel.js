@@ -12,3 +12,8 @@ export const createUser = async (name, email, passwordHash) => {
   );
   return result.insertId;
 };
+
+export const findUserById = async (id) => {
+  const [rows] = await pool.query('SELECT * FROM users WHERE id = ?', [id]);
+  return rows[0];
+};

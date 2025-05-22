@@ -1,2 +1,13 @@
 node_modules/
 .env
+
+# MySQL runtime files
+mysql/data/
+*.pem
+*.pid
+*.sock
+ibdata1
+*.err
+*.log
+*.cnf
+binlog.*

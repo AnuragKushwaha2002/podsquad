@@ -1,0 +1,3 @@
+# MySQL runtime files
+# Ignore MySQL data files
+data/

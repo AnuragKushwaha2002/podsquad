@@ -1,9 +1,13 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 import authRoutes from './routes/authRoutes.js';
 import cors from 'cors';
 
+
+
 dotenv.config();
+
 const app = express();
 
 // ✅ CORS first
@@ -13,6 +17,7 @@ app.use(cors({
 }));
 
 // ✅ Then JSON parsing
+app.use(cookieParser());
 app.use(express.json());
 
 // ✅ Then your routes
